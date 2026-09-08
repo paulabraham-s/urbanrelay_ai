@@ -40,11 +40,22 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
   const logout = useAuthStore((s) => s.logout);
   const push = useToastStore((s) => s.push);
 
-  const [cities, setCities] = useState<Array<{ id: string; name: string; code: string }>>([]);
+  const [cities, setCities] = useState<Array<{ id: string; name: string; code: string; active?: boolean }>>([]);
   const [city, setCity] = useState<{ id: string; name: string; code: string; start_hour?: number } | null>(null);
 
   useEffect(() => {
-    api.cities().then(setCities).catch(() => undefined);
+    api.cities().then((all) => {
+      setCities(all);
+      const active = all.find((c) => c.active);
+      if (active) {
+        const next = { id: active.id, name: active.name, code: active.code };
+        setCity(next);
+        // mirror into the simulation store so pages that read from the store
+        // (LiveOps, CommandCenter, etc.) show the right city even before the
+        // WebSocket snapshot arrives.
+        useSimStore.getState().setCity(next);
+      }
+    }).catch(() => undefined);
   }, []);
 
   const cityStartHours = city ? (city.start_hour ?? 7) : 7;

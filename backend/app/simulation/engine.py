@@ -696,13 +696,14 @@ class SimulationEngine:
     # ------------------------------------------------------------- snapshots
     def snapshot_tick(self) -> dict:
         s = self.state
-        return {
+        tick: dict = {
             "type": "tick",
             "run_id": s.run_id,
             "t": round(s.t, 1),
             "speed": s.speed,
             "mode": s.mode,
             "scenario": s.scenario.get("id"),
+            "city_id": s.city_id,
             "vehicles": [
                 {
                     "id": v.id, "name": v.name, "type": v.type, "status": v.status,
@@ -723,7 +724,7 @@ class SimulationEngine:
             "congestion": s.zone_loads(),
             "waves": [
                 {"id": w["id"], "name": w["name"], "zone_name": w.get("zone_name"), "hub_id": w.get("hub_id"),
-                 "orders": len(w["orders"]), "status": "ACTIVE"}
+                 "hub_name": w.get("hub_name"), "orders": len(w["orders"]), "status": "ACTIVE"}
                 for w in s.waves
             ],
             "alerts": s.alerts_this_tick,
@@ -731,7 +732,71 @@ class SimulationEngine:
             "orders_in_flight": s.active_order_count(),
             "delivered": sum(s.metrics.deliveries.values()),
             "generated": s.orders_generated,
+            "before_after": self.before_after(),
+            "orders": [
+                {
+                    "id": o.id, "platform": o.platform, "zone_name": o.zone_name,
+                    "lat": o.customer_lat, "lng": o.customer_lng,
+                    "status": o.status, "mode": o.mode, "priority": o.priority,
+                    "created_t": round(o.created_t, 1),
+                    "hub_id": o.hub_id, "vehicle_id": o.vehicle_id, "courier_id": o.courier_id,
+                    "customer_name": o.customer_name, "address": o.address,
+                }
+                for o in list(s.orders.values())[-500:]
+            ],
+            "curb_zones": s.curb_zones,
+            "curb_reservations": s.curb_reservations[-60:],
+            "last_optimization": getattr(s, "last_optimization", None),
+            "recommendations": self._tick_recommendations(),
         }
+        return tick
+
+    def _tick_recommendations(self) -> list[dict]:
+        """Build lightweight recommendations for the frontend AI panel."""
+        s = self.state
+        out: list[dict] = []
+        pending = [o for o in s.orders.values() if o.status == "PENDING"]
+        loads = s.zone_loads()
+        worst = max(loads, key=lambda z: z["index"]) if loads else None
+        k = self._kpis()
+
+        if worst and worst["index"] > 0.45:
+            out.append({
+                "id": "rec-congestion",
+                "type": "CONGESTION",
+                "zone": worst["zone_name"],
+                "title": f"{len(pending)} deliveries converging on {worst['zone_name']}",
+                "body": f"Zone {worst['zone_name']} congestion index is {worst['index']:.0%}. "
+                        f"{k['vehicles_on_road']} vehicles are on the road right now.",
+                "action": "ACTIVATE URBANRELAY AI" if s.mode == SIMULATION_MODE_BASELINE else "RE-OPTIMIZE DISPATCH",
+                "mode": s.mode,
+                "expected_impact": getattr(s, "last_optimization", None),
+            })
+        elif pending:
+            out.append({
+                "id": "rec-wave",
+                "type": "CONSOLIDATION",
+                "zone": pending[0].zone_name if pending else None,
+                "title": f"{len(pending)} orders waiting for dispatch",
+                "body": "Consolidating these orders into delivery waves through micro-hubs "
+                        "reduces vehicle duplication and curb conflicts.",
+                "action": "ACTIVATE URBANRELAY AI" if s.mode == SIMULATION_MODE_BASELINE else "RE-OPTIMIZE DISPATCH",
+                "mode": s.mode,
+                "expected_impact": getattr(s, "last_optimization", None),
+            })
+        for hub in s.hubs.values():
+            if hub.get("active", True) and hub["capacity"] > 0 and hub["occupied"] / hub["capacity"] > 0.8:
+                out.append({
+                    "id": f"rec-hub-{hub['id'][:8]}",
+                    "type": "HUB_CAPACITY",
+                    "zone": hub.get("zone_id"),
+                    "title": f"Hub {hub['name']} nearing capacity",
+                    "body": f"{hub['occupied']}/{hub['capacity']} slots used. Route new waves to a neighbouring hub.",
+                    "action": "VIEW HUBS",
+                    "mode": s.mode,
+                    "expected_impact": None,
+                })
+        return out[:4]
 
     def _kpis(self) -> dict:
         s = self.state

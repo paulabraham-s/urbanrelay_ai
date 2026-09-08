@@ -61,3 +61,6 @@ coverage/
 .pytest_cache/
 .mypy_cache/
 .eslintcache
+.freebuff/
+tmp_*.cs
+tmp_*.ps1

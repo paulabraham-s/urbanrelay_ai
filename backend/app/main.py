@@ -49,6 +49,12 @@ async def lifespan(app: FastAPI):
     # load topology + road graph + simulation engine
     sim = get_sim_service()
     sim.init()
+
+    # auto-start the simulation so data is visible immediately
+    import asyncio as _asyncio
+    loop = _asyncio.get_event_loop()
+    loop.create_task(sim.start("FESTIVAL_SALE", 42, 3.0, burst=50))
+
     logger.info("UrbanRelay AI backend ready")
     yield
 

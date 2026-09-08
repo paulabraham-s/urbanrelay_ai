@@ -13,7 +13,11 @@ router = APIRouter(prefix="/api", tags=["fleet"])
 def list_vehicles(sim=Depends(get_sim_service)) -> list[dict]:
     db = SessionLocal()
     try:
-        rows = list(db.execute(select(Vehicle).order_by(Vehicle.type, Vehicle.name)).scalars())
+        city_id = sim.city_id or sim.state.city_id
+        q = select(Vehicle)
+        if city_id:
+            q = q.where(Vehicle.city_id == city_id)
+        rows = list(db.execute(q.order_by(Vehicle.type, Vehicle.name)).scalars())
         live = sim.state.vehicles
         out = []
         for r in rows:
@@ -37,7 +41,11 @@ def list_vehicles(sim=Depends(get_sim_service)) -> list[dict]:
 def list_couriers(sim=Depends(get_sim_service)) -> list[dict]:
     db = SessionLocal()
     try:
-        rows = list(db.execute(select(Courier).order_by(Courier.mode, Courier.name)).scalars())
+        city_id = sim.city_id or sim.state.city_id
+        q = select(Courier)
+        if city_id:
+            q = q.where(Courier.city_id == city_id)
+        rows = list(db.execute(q.order_by(Courier.mode, Courier.name)).scalars())
         live = sim.state.couriers
         out = []
         for r in rows:

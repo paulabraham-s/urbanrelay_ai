@@ -124,12 +124,13 @@ export const useSimStore = create<SimState>((set) => ({
       if (msg.couriers) next.couriers = msg.couriers;
       if (msg.hubs && s.hubs.length) {
         const hubMap = new Map(msg.hubs.map((h) => [h.id, h]));
-        next.hubs = s.hubs.map((h) => (hubMap.has(h.id) ? { ...h, occupied: hubMap.get(h.id)!.occupied, capacity: hubMap.get(h.id)!.capacity } : h));
-      } else if (msg.hubs) {
-        next.hubs = msg.hubs.map((h) => ({
-          id: h.id, name: "", type: "", lat: 0, lng: 0, capacity: h.capacity, occupied: h.occupied,
-          operating_start: 8, operating_end: 22, active: true, accessibility: 0,
-        }));
+        next.hubs = s.hubs.map((h) => {
+          const patch = hubMap.get(h.id);
+          if (patch) return { ...h, occupied: patch.occupied, capacity: patch.capacity };
+          return h;
+        });
+      } else if (msg.hubs && msg.hubs.length > 0 && "lat" in msg.hubs[0]) {
+        next.hubs = msg.hubs as typeof s.hubs;
       }
       if (msg.congestion) next.congestion = msg.congestion;
       if (msg.waves) next.waves = msg.waves;
@@ -140,18 +141,12 @@ export const useSimStore = create<SimState>((set) => ({
       if (msg.generated !== undefined) next.generated = msg.generated;
 
       if (msg.zones) next.zones = msg.zones;
-      if (msg.hubs && msg.zones) {
-        next.hubs = msg.hubs as typeof s.hubs;
-      }
       if (msg.orders) next.orders = msg.orders;
       if (msg.curb_zones) next.curbZones = msg.curb_zones;
       if (msg.curb_reservations) next.curbReservations = msg.curb_reservations;
       if (msg.before_after) next.beforeAfter = msg.before_after;
       if (msg.last_optimization) next.lastOptimization = msg.last_optimization;
-      if (msg.vehicles && msg.vehicles.length && msg.zones) {
-        const vehMap = new Map(msg.vehicles.map((v) => [v.id, v]));
-        next.vehicles = msg.vehicles.map((v) => ({ ...v, route: vehMap.get(v.id)?.route }));
-      }
+      if (msg.recommendations) next.recommendations = msg.recommendations;
       return next;
     }),
 
@@ -168,5 +163,9 @@ export const useSimStore = create<SimState>((set) => ({
   setCity: (c: { id: string; name: string; code: string; start_hour?: number } | null) =>
     set({ city: c ?? { id: "", name: "", code: "", start_hour: undefined } }),
 }));
+
+// TEMP PROBE: expose the store so we can inspect reactivity from the browser.
+// @ts-ignore
+if (typeof window !== "undefined") window.__UR_SIM_STORE = useSimStore;
 
 export { EMPTY_KPIS };

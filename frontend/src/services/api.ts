@@ -50,7 +50,7 @@ export const api = {
   loginDemo: () => request<{ access_token: string; role: string; username: string; full_name: string }>("/api/auth/login", { method: "POST", body: JSON.stringify({ demo: true }) }),
 
   // cities / zones
-  cities: () => request<{ id: string; name: string; code: string }[]>("/api/cities"),
+  cities: () => request<{ id: string; name: string; code: string; active: boolean; center_lat: number; center_lng: number }[]>("/api/cities"),
   activateCity: (cityId: string) => request<{ ready: boolean; running: boolean; t: number }>(`/api/cities/${cityId}/activate`, { method: "POST" }),
   zones: (cityId: string) => request<Zone[]>(`/api/cities/${cityId}/zones`),
 

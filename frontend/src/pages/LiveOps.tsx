@@ -22,13 +22,18 @@ export default function LiveOps() {
   const couriers = useSimStore((s) => s.couriers);
   const curbZones = useSimStore((s) => s.curbZones);
   const congestion = useSimStore((s) => s.congestion);
+  const city = useSimStore((s) => s.city);
   const [tab, setTab] = useState("vehicles");
+
+  const zoneList = city?.code === "vizag"
+    ? "Visakhapatnam"
+    : "Secunderabad · Kukatpally · Miyapur";
 
   return (
     <div>
       <PageHeader
         title="Live Operations"
-        sub="Real-time fleet movements on the Secunderabad · Kukatpally · Miyapur road network"
+        sub={`Real-time fleet movements on the ${zoneList} road network`}
         right={<Tabs tabs={[{ id: "vehicles", label: `Vehicles (${vehicles.length})` }, { id: "couriers", label: `Couriers (${couriers.length})` }]} active={tab} onChange={setTab} />}
       />
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">

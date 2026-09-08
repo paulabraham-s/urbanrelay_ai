@@ -41,23 +41,14 @@ class SimulationService:
         db = SessionLocal()
         try:
             self._load_topology(db)
+            # Ensure service-level city_id mirrors the state (set by _load_topology).
+            if not self.city_id and self.state.city_id:
+                self.city_id = self.state.city_id
         finally:
             db.close()
         self.graph = self._graph_for_active_city()
         self.engine = SimulationEngine(self.state, self.graph, self.persist, manager.broadcast)
         self.ready = True
-        # persist the city metadata used by the snapshot so it never touches the DB again
-        city_id = self.city_id
-        if city_id:
-            db2 = SessionLocal()
-            try:
-                from app.models.entities import City as _City
-                row = db2.get(_City, city_id)
-                if row:
-                    self._cached_city_name = row.name
-                    self._cached_city_start_hour = row.start_hour
-            finally:
-                db2.close()
         logger.info("simulation service ready (city=%s): %d zones, %d hubs, %d vehicles, %d couriers",
                     self.city_code, len(self.state.zones), len(self.state.hubs),
                     len(self.state.vehicles), len(self.state.couriers))
@@ -135,6 +126,9 @@ class SimulationService:
         city = db.query(City).filter_by(active=True).first()
         if city:
             s.city_id = city.id
+            self.city_code = city.code
+            self._cached_city_name = city.name
+            self._cached_city_start_hour = city.start_hour
             zones = db.query(Zone).filter_by(city_id=city.id).all()
             s.zones = [
                 {
@@ -176,13 +170,9 @@ class SimulationService:
         warehouses_path = Path(get_settings().seed_dir) / "warehouses.json"
         if warehouses_path.exists():
             all_wh = json.loads(warehouses_path.read_text(encoding="utf-8"))
-            s.warehouses = [w for w in all_wh if w.get("city", "hyderabad") == self.city_code]
-            if city:
-                self._cached_city_name = city.name
-                self._cached_city_start_hour = city.start_hour
+            s.warehouses = [w for w in all_wh if w.get("city") == (self.city_code or "hyderabad")]
         else:
-            self._cached_city_name = ""
-            self._cached_city_start_hour = None
+            s.warehouses = []
 
     # ------------------------------------------------------------- lifecycle
     async def start(self, scenario_id: str, seed: int, speed: float, burst: int = 0) -> dict:

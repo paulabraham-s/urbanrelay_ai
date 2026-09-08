@@ -41,7 +41,8 @@
           "color": "#34d399",
           "calibration_area": "Miyapur"
         }
-      ]
+      ],
+      "active": true
     },
     {
       "name": "Visakhapatnam",
@@ -95,7 +96,8 @@
           "color": "#a78bfa",
           "calibration_area": "MVP Colony"
         }
-      ]
+      ],
+      "active": false
     }
   ]
 }

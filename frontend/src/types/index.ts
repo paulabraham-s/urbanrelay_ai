@@ -206,7 +206,7 @@ export interface TickMessage {
   run_id?: string;
   vehicles?: Vehicle[];
   couriers?: Courier[];
-  hubs?: { id: string; occupied: number; capacity: number }[];
+  hubs?: { id: string; occupied: number; capacity: number; name?: string; type?: string; lat?: number; lng?: number }[];
   congestion?: { zone_id: string; zone_name: string; index: number }[];
   waves?: Wave[];
   alerts?: AlertItem[];
@@ -221,6 +221,7 @@ export interface TickMessage {
   curb_reservations?: CurbReservation[];
   before_after?: BeforeAfter;
   last_optimization?: Recommendation["expected_impact"] | null;
+  recommendations?: Recommendation[];
   status?: {
     ready: boolean;
     running: boolean;
