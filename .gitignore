@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.venv/**
+*.egg-info/
+*.egg
+dist/
+build/
+*.manifest
+*.pyd
+
+# Node
+node_modules/
+frontend/node_modules/
+*.js.map
+.frontend/dist/
+
+# Environments
+.env
+.env.*
+!.env.example
+
+# VirtualEnv / pip
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / dist artifacts
+frontend/dist/
+dist/
+
+# Local databases (never commit live/personal DBs)
+*.db
+*.sqlite
+*.sqlite3
+
+# Frontend public data is a build-time copy — source of truth is data/geojson
+frontend/public/data/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Misc
+coverage/
+.pytest_cache/
+.mypy_cache/
+.eslintcache

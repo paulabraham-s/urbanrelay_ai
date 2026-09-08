@@ -1,0 +1,20 @@
+[
+  { "name": "Kukatpally Market Curb A", "city": "hyderabad", "zone_code": "KUKATPALLY", "lat": 17.486, "lng": 78.408, "capacity": 2, "operating_start": 8, "operating_end": 22 },
+  { "name": "Kukatpally Market Curb B", "city": "hyderabad", "zone_code": "KUKATPALLY", "lat": 17.4878, "lng": 78.4096, "capacity": 2, "operating_start": 8, "operating_end": 22 },
+  { "name": "Balaji Nagar Curb", "city": "hyderabad", "zone_code": "KUKATPALLY", "lat": 17.4795, "lng": 78.4025, "capacity": 1, "operating_start": 8, "operating_end": 21 },
+  { "name": "Secunderabad Clock Tower Curb", "city": "hyderabad", "zone_code": "SECUNDERABAD", "lat": 17.4415, "lng": 78.5008, "capacity": 2, "operating_start": 8, "operating_end": 22 },
+  { "name": "MG Road Curb", "city": "hyderabad", "zone_code": "SECUNDERABAD", "lat": 17.4395, "lng": 78.5045, "capacity": 2, "operating_start": 8, "operating_end": 22 },
+  { "name": "Railway Station Curb", "city": "hyderabad", "zone_code": "SECUNDERABAD", "lat": 17.4329, "lng": 78.502, "capacity": 1, "operating_start": 6, "operating_end": 23 },
+  { "name": "Miyapur Metro Curb", "city": "hyderabad", "zone_code": "MIYAPUR", "lat": 17.4928, "lng": 78.3469, "capacity": 2, "operating_start": 6, "operating_end": 23 },
+  { "name": "Allwyn Colony Curb", "city": "hyderabad", "zone_code": "MIYAPUR", "lat": 17.4988, "lng": 78.364, "capacity": 1, "operating_start": 8, "operating_end": 21 },
+  { "name": "Miyapur Main Road Curb", "city": "hyderabad", "zone_code": "MIYAPUR", "lat": 17.501, "lng": 78.3528, "capacity": 2, "operating_start": 8, "operating_end": 22 },
+  { "name": "Dwaraka Nagar Commercial Curb A", "city": "vizag", "zone_code": "DWARAKA_NAGAR", "lat": 17.7241, "lng": 83.3022, "capacity": 2, "operating_start": 8, "operating_end": 22 },
+  { "name": "Dwaraka Nagar Commercial Curb B", "city": "vizag", "zone_code": "DWARAKA_NAGAR", "lat": 17.7212, "lng": 83.2996, "capacity": 2, "operating_start": 8, "operating_end": 22 },
+  { "name": "RTC Complex Loading Curb", "city": "vizag", "zone_code": "DWARAKA_NAGAR", "lat": 17.7288, "lng": 83.2968, "capacity": 2, "operating_start": 6, "operating_end": 23 },
+  { "name": "Kancharapalem Market Curb", "city": "vizag", "zone_code": "KANCHARAPALEM", "lat": 17.7156, "lng": 83.2834, "capacity": 2, "operating_start": 7, "operating_end": 22 },
+  { "name": "Port Approach Loading Curb", "city": "vizag", "zone_code": "KANCHARAPALEM", "lat": 17.7179, "lng": 83.2808, "capacity": 2, "operating_start": 5, "operating_end": 23 },
+  { "name": "Gajuwaka Junction Curb", "city": "vizag", "zone_code": "GAJUWAKA", "lat": 17.6298, "lng": 83.2026, "capacity": 2, "operating_start": 8, "operating_end": 22 },
+  { "name": "Gajuwaka Industrial Curb", "city": "vizag", "zone_code": "GAJUWAKA", "lat": 17.6322, "lng": 83.1985, "capacity": 2, "operating_start": 7, "operating_end": 22 },
+  { "name": "MVP Colony Double Road Curb", "city": "vizag", "zone_code": "MVP_COLONY", "lat": 17.7351, "lng": 83.3351, "capacity": 1, "operating_start": 8, "operating_end": 22 },
+  { "name": "MVP Sector-3 Curb", "city": "vizag", "zone_code": "MVP_COLONY", "lat": 17.7372, "lng": 83.3318, "capacity": 1, "operating_start": 8, "operating_end": 21 }
+]

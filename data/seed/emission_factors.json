@@ -1,0 +1,8 @@
+[
+  { "mode": "truck", "gco2_per_km": 620.0, "source": "Configured estimate — diesel light truck, urban cycle" },
+  { "mode": "van", "gco2_per_km": 280.0, "source": "Configured estimate — CNG/petrol cargo van" },
+  { "mode": "motorcycle", "gco2_per_km": 95.0, "source": "Configured estimate — petrol motorcycle" },
+  { "mode": "e-scooter", "gco2_per_km": 35.0, "source": "Configured estimate — electric scooter incl. grid mix" },
+  { "mode": "bicycle", "gco2_per_km": 0.0, "source": "Zero direct emissions" },
+  { "mode": "walking", "gco2_per_km": 0.0, "source": "Zero direct emissions" }
+]

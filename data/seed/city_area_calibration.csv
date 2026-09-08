@@ -1,0 +1,171 @@
+area_id,city,state,area_name,total_road_length_km,num_intersections,avg_traffic_volume_per_hr,avg_traffic_speed_kmph,congestion_level,num_micro_hubs,total_hub_storage_capacity,avg_hub_utilization_pct,num_delivery_orders_monthly,avg_package_weight_kg,num_vehicles_fleet,most_common_vehicle_type,num_couriers,avg_courier_capacity_kg,avg_daily_demand_orders,num_curb_zones,total_curb_capacity_vehicles
+mum_andheri,Mumbai,Maharashtra,Andheri,16.13,13,1946,18.5,High,9,733,56.6,702,2.9,83,Two-Wheeler,16,20.5,234,11,20
+mum_bandra,Mumbai,Maharashtra,Bandra,16.2,6,1114,13.5,Severe,13,2316,45.8,298,1.42,17,Mini Van,55,16.4,99,0,0
+mum_dadar,Mumbai,Maharashtra,Dadar,72.84,19,1696,21,High,16,3174,45.4,247,2.79,15,Three-Wheeler (E),32,9,82,4,6
+mum_colaba,Mumbai,Maharashtra,Colaba,68.88,23,2084,21.2,High,11,1357,32.7,374,2.67,15,Two-Wheeler,10,18.8,124,4,11
+mum_powai,Mumbai,Maharashtra,Powai,78.66,12,1200,25.8,Moderate,13,2058,80.8,508,3.11,43,Mini Van,57,21.3,169,4,10
+mum_borivali,Mumbai,Maharashtra,Borivali,46.39,5,509,24.9,Moderate,8,1237,75.5,363,1.94,26,Mini Van,60,19.7,121,10,32
+mum_malad,Mumbai,Maharashtra,Malad,62.45,7,2033,16.9,High,8,946,62.6,519,2.35,41,Two-Wheeler,23,19.8,173,4,9
+mum_chembur,Mumbai,Maharashtra,Chembur,35.4,5,1170,24,Moderate,16,2480,40.2,517,2.45,93,Mini Van,43,20.8,172,5,10
+mum_worli,Mumbai,Maharashtra,Worli,77.94,19,1475,20,High,11,1471,61.3,721,3.06,94,Mini Van,17,15.8,240,5,16
+mum_juhu,Mumbai,Maharashtra,Juhu,78.51,8,1326,28.7,Moderate,10,1918,60.4,240,2.63,62,E-Cargo Bike,41,9.9,80,1,3
+mum_thane,Mumbai,Maharashtra,Thane,80.92,11,563,21,High,13,2050,24,243,2.61,14,Two-Wheeler,64,21.8,81,3,4
+mum_kurla,Mumbai,Maharashtra,Kurla,67.32,13,1444,27.9,Moderate,7,604,66,294,2.56,105,Two-Wheeler,32,11.5,98,0,0
+mum_ghatkopar,Mumbai,Maharashtra,Ghatkopar,79.98,19,2326,26,Moderate,4,404,92.1,280,2.78,26,Two-Wheeler,28,17.4,93,3,9
+mum_vikhroli,Mumbai,Maharashtra,Vikhroli,36.73,10,526,18.5,High,2,297,71.6,460,2.41,70,E-Cargo Bike,67,15.4,153,11,24
+mum_mulund,Mumbai,Maharashtra,Mulund,29.99,21,937,25.2,Moderate,15,2179,30.7,496,1.96,101,Mini Van,23,11.3,165,6,14
+mum_goregaon,Mumbai,Maharashtra,Goregaon,40.42,18,1428,11.7,Severe,8,1039,53.6,107,1.75,105,Two-Wheeler,66,21.2,35,10,23
+mum_santacruz,Mumbai,Maharashtra,Santacruz,35.38,16,1666,18.9,High,5,598,68.2,276,1.89,45,Light Truck,30,19.6,92,7,10
+del_connaught_place,Delhi,Delhi,Connaught Place,60.91,25,1754,14.2,Severe,17,1713,40.9,502,2.92,25,Light Truck,38,15.5,167,11,18
+del_karol_bagh,Delhi,Delhi,Karol Bagh,65.56,18,1479,14.3,Severe,18,3586,33.1,284,2.53,107,Mini Van,77,12.2,94,3,4
+del_dwarka,Delhi,Delhi,Dwarka,66.03,27,638,10.6,Severe,14,2247,29.3,191,1.26,93,Mini Van,33,11.4,63,11,19
+del_rohini,Delhi,Delhi,Rohini,26.04,5,2175,22.1,Moderate,10,1282,72.6,175,1.76,125,Two-Wheeler,87,8.5,58,0,0
+del_saket,Delhi,Delhi,Saket,82.98,21,1642,20.8,High,13,1064,55,822,2.76,94,Two-Wheeler,61,19.4,274,4,9
+del_vasant_kunj,Delhi,Delhi,Vasant Kunj,87.94,12,965,13.6,Severe,10,918,67.1,833,1.88,132,Mini Van,45,15.5,277,16,46
+del_lajpat_nagar,Delhi,Delhi,Lajpat Nagar,82.31,16,2304,12.8,Severe,3,455,59.3,484,1.43,129,Two-Wheeler,20,21.5,161,5,10
+del_janakpuri,Delhi,Delhi,Janakpuri,99.78,23,2869,12,Severe,18,2775,42.2,592,1.42,111,Two-Wheeler,62,9.5,197,3,6
+del_pitampura,Delhi,Delhi,Pitampura,37.89,12,1892,11.5,Severe,16,2145,50.5,574,1.52,123,Two-Wheeler,20,15.7,191,16,28
+del_mayur_vihar,Delhi,Delhi,Mayur Vihar,101.02,31,1399,19.4,High,19,2943,85.5,674,1.27,55,Two-Wheeler,83,14.6,224,7,14
+del_chandni_chowk,Delhi,Delhi,Chandni Chowk,75.05,14,2692,9.8,Severe,18,1639,81.8,481,2.68,68,Two-Wheeler,24,21.3,160,10,19
+del_hauz_khas,Delhi,Delhi,Hauz Khas,36.11,15,1998,19.1,High,4,412,54.4,528,2.91,84,Two-Wheeler,76,13.2,176,3,6
+del_punjabi_bagh,Delhi,Delhi,Punjabi Bagh,49.21,21,2595,13,Severe,15,2554,71.8,887,2.36,67,E-Cargo Bike,54,8.1,295,0,0
+del_rajouri_garden,Delhi,Delhi,Rajouri Garden,29.78,13,2110,17.7,High,9,1551,24,825,2.56,64,Mini Van,66,21.1,275,10,28
+del_greater_kailash,Delhi,Delhi,Greater Kailash,95.98,28,1234,9.5,Severe,7,865,38.6,481,3.08,35,Mini Van,42,19.7,160,2,4
+del_preet_vihar,Delhi,Delhi,Preet Vihar,83.57,27,1177,24.7,Moderate,10,957,31.9,465,2.82,20,Two-Wheeler,28,19.2,155,13,24
+del_shahdara,Delhi,Delhi,Shahdara,73.79,25,678,17.7,High,4,608,28.4,220,2.28,130,Mini Van,13,9.4,73,3,9
+blr_koramangala,Bangalore,Karnataka,Koramangala,28,11,1932,17.7,High,7,958,57.5,319,2.81,24,Two-Wheeler,35,9.8,106,10,23
+blr_indiranagar,Bangalore,Karnataka,Indiranagar,50.44,6,2053,18,High,9,1546,27.7,177,2.05,38,Two-Wheeler,24,11.8,59,4,13
+blr_whitefield,Bangalore,Karnataka,Whitefield,38.66,7,746,17.2,High,13,2422,32.8,292,2.36,54,Light Truck,18,8.9,97,9,15
+blr_jayanagar,Bangalore,Karnataka,Jayanagar,56.12,15,1135,28.7,Moderate,14,1926,86.4,360,1.98,92,Light Truck,49,9.9,120,6,13
+blr_hsr_layout,Bangalore,Karnataka,HSR Layout,55.74,9,1477,16.8,High,7,1306,75.3,274,1.76,59,E-Cargo Bike,33,21.8,91,3,10
+blr_electronic_city,Bangalore,Karnataka,Electronic City,58.36,19,745,21.2,High,10,1294,28.1,493,2.17,23,E-Cargo Bike,10,15.3,164,3,9
+blr_marathahalli,Bangalore,Karnataka,Marathahalli,13.34,20,1152,29.8,Moderate,8,1485,90.4,123,1.76,23,Two-Wheeler,59,17.7,41,10,34
+blr_malleswaram,Bangalore,Karnataka,Malleswaram,62.53,20,1492,29.1,Moderate,14,1912,36.3,438,1.31,34,Two-Wheeler,28,19.3,146,0,0
+blr_btm_layout,Bangalore,Karnataka,BTM Layout,50.4,19,1263,29.6,Moderate,6,841,44.1,183,2.98,59,Two-Wheeler,22,15.5,61,4,6
+blr_rajajinagar,Bangalore,Karnataka,Rajajinagar,62.17,14,672,20.6,High,4,401,42.1,563,2.89,75,Two-Wheeler,58,9.5,187,2,3
+blr_yelahanka,Bangalore,Karnataka,Yelahanka,49.17,10,1414,30.2,Low,5,546,81.6,90,3.05,37,E-Cargo Bike,9,11,30,0,0
+blr_jp_nagar,Bangalore,Karnataka,JP Nagar,15.46,14,783,18.8,High,11,1441,74.7,230,1.46,13,Two-Wheeler,53,9.7,76,0,0
+blr_hebbal,Bangalore,Karnataka,Hebbal,51.88,12,1512,22.3,Moderate,11,1676,33.2,259,3.19,45,E-Cargo Bike,44,10.4,86,7,20
+blr_rt_nagar,Bangalore,Karnataka,RT Nagar,66.39,10,1024,26.1,Moderate,13,2347,62.2,106,2.17,60,Two-Wheeler,53,10.8,35,5,13
+blr_banashankari,Bangalore,Karnataka,Banashankari,15.06,19,611,29.9,Moderate,12,1842,60.6,267,1.98,86,Light Truck,43,14.5,89,4,13
+blr_mg_road,Bangalore,Karnataka,MG Road,65.39,20,1043,29.4,Moderate,10,1895,75.2,529,2.8,57,E-Cargo Bike,45,9.1,176,4,12
+blr_bellandur,Bangalore,Karnataka,Bellandur,31.33,14,1209,13.3,Severe,3,479,61.1,396,3.01,87,Two-Wheeler,23,20.4,132,6,16
+hyd_banjara_hills,Hyderabad,Telangana,Banjara Hills,32.86,19,1964,21.5,High,4,780,57.6,548,1.27,54,Two-Wheeler,21,8.1,182,5,16
+hyd_jubilee_hills,Hyderabad,Telangana,Jubilee Hills,22.86,15,1857,29.1,Moderate,4,693,78.3,303,2.71,10,Three-Wheeler (E),17,13.4,101,10,28
+hyd_gachibowli,Hyderabad,Telangana,Gachibowli,55.28,15,492,32.1,Low,10,1058,64.6,299,1.26,70,Two-Wheeler,24,16.8,99,8,26
+hyd_madhapur,Hyderabad,Telangana,Madhapur,35.35,2,577,28.4,Moderate,3,429,32.5,471,1.62,68,Light Truck,29,18.5,157,3,10
+hyd_secunderabad,Hyderabad,Telangana,Secunderabad,33.1,10,898,27.2,Moderate,3,295,92.3,177,2.82,13,Two-Wheeler,37,9.5,59,3,6
+hyd_kukatpally,Hyderabad,Telangana,Kukatpally,11.71,7,1666,29.1,Moderate,11,1641,76.6,290,1.83,71,Two-Wheeler,27,9.9,96,10,17
+hyd_ameerpet,Hyderabad,Telangana,Ameerpet,22.6,17,1435,33.2,Low,8,1448,57.2,519,2.02,80,Mini Van,39,20.9,173,0,0
+hyd_begumpet,Hyderabad,Telangana,Begumpet,25.74,12,1091,12.5,Severe,1,138,48.4,518,1.85,19,E-Cargo Bike,13,13.8,172,10,32
+hyd_dilsukhnagar,Hyderabad,Telangana,Dilsukhnagar,39.13,13,1635,13.5,Severe,12,2220,55,241,2.26,47,Two-Wheeler,23,9.7,80,7,22
+hyd_lb_nagar,Hyderabad,Telangana,LB Nagar,26.94,10,702,33.1,Low,4,489,68.6,442,2.1,18,Two-Wheeler,27,19.4,147,3,6
+hyd_kondapur,Hyderabad,Telangana,Kondapur,31.15,8,1190,30.7,Low,11,1107,37.8,244,2.56,65,Two-Wheeler,44,11,81,2,6
+hyd_miyapur,Hyderabad,Telangana,Miyapur,52.02,6,1426,18.8,High,7,932,84.4,252,2.68,31,Light Truck,37,20,84,2,4
+hyd_uppal,Hyderabad,Telangana,Uppal,55.49,18,1396,20.6,High,3,551,28.6,541,3.06,82,E-Cargo Bike,46,17.3,180,4,12
+hyd_malakpet,Hyderabad,Telangana,Malakpet,38.73,5,587,27.2,Moderate,3,492,52.6,136,2.32,69,Two-Wheeler,56,11.5,45,4,9
+hyd_somajiguda,Hyderabad,Telangana,Somajiguda,24.04,8,537,25,Moderate,13,1233,74,337,1.86,33,Two-Wheeler,56,9.5,112,6,15
+hyd_manikonda,Hyderabad,Telangana,Manikonda,22.32,3,1875,19.5,High,6,566,37,185,2.56,17,Two-Wheeler,16,13.6,61,4,6
+hyd_attapur,Hyderabad,Telangana,Attapur,56.28,16,1566,21.1,High,9,1627,73.9,516,2.76,65,Two-Wheeler,53,19.1,172,3,7
+ahd_navrangpura,Ahmedabad,Gujarat,Navrangpura,31.73,13,717,26,Moderate,5,539,47,348,2.13,39,E-Cargo Bike,43,17,116,6,10
+ahd_satellite,Ahmedabad,Gujarat,Satellite,29.42,4,1417,32.4,Low,9,1199,82.8,405,2.24,51,Two-Wheeler,15,8.3,135,9,30
+ahd_vastrapur,Ahmedabad,Gujarat,Vastrapur,39.73,15,529,29.3,Moderate,10,1085,62.3,447,3.1,37,Mini Van,13,18.2,149,6,14
+ahd_maninagar,Ahmedabad,Gujarat,Maninagar,12.2,18,982,13.8,Severe,2,301,22.7,428,2.69,7,Two-Wheeler,37,12.3,142,3,9
+ahd_bopal,Ahmedabad,Gujarat,Bopal,31.63,18,508,26.7,Moderate,4,430,45.3,404,2.04,59,Two-Wheeler,50,20.8,134,5,10
+ahd_paldi,Ahmedabad,Gujarat,Paldi,15.41,8,855,34.7,Low,7,889,41.2,317,2.26,70,E-Cargo Bike,30,21.7,105,0,0
+ahd_chandkheda,Ahmedabad,Gujarat,Chandkheda,25.99,10,1968,21.9,High,12,1726,49.4,101,1.38,70,Two-Wheeler,13,12,33,3,4
+ahd_naranpura,Ahmedabad,Gujarat,Naranpura,22.04,9,589,26.8,Moderate,6,978,35.1,181,2.12,36,Mini Van,22,10,60,5,11
+ahd_thaltej,Ahmedabad,Gujarat,Thaltej,50.54,3,676,34.7,Low,5,437,37.3,102,3.15,29,Two-Wheeler,14,9.4,34,8,20
+ahd_ghatlodia,Ahmedabad,Gujarat,Ghatlodia,30.2,9,1208,27.2,Moderate,7,770,61.8,514,2.32,39,Two-Wheeler,10,21.8,171,0,0
+ahd_bodakdev,Ahmedabad,Gujarat,Bodakdev,56.88,8,1831,32.7,Low,5,736,48.2,478,2.58,57,Two-Wheeler,35,16.7,159,7,22
+ahd_ellisbridge,Ahmedabad,Gujarat,Ellisbridge,19.05,8,1626,32.4,Low,6,877,79.9,429,2.75,45,Two-Wheeler,37,9.8,143,5,7
+ahd_nikol,Ahmedabad,Gujarat,Nikol,16.05,17,1713,26.4,Moderate,12,1144,72.1,263,2.62,63,Light Truck,50,21.3,87,5,16
+ahd_vejalpur,Ahmedabad,Gujarat,Vejalpur,46.91,11,1752,16.3,High,10,1819,74.1,144,2.49,68,E-Cargo Bike,15,21.7,48,3,5
+ahd_sabarmati,Ahmedabad,Gujarat,Sabarmati,12.01,12,1057,34.6,Low,4,552,21.6,273,2.48,19,Two-Wheeler,22,18.3,91,4,7
+ahd_ranip,Ahmedabad,Gujarat,Ranip,11.69,15,1107,19.4,High,2,331,85.2,222,2.06,77,Three-Wheeler (E),20,13.4,74,4,10
+ahd_gota,Ahmedabad,Gujarat,Gota,57.17,15,817,14.7,Severe,11,1872,46.9,381,1.56,32,Two-Wheeler,40,15.7,127,6,15
+chn_t_nagar,Chennai,Tamil Nadu,T Nagar,37.92,15,2089,17,High,13,1525,58.9,227,3.13,63,Two-Wheeler,24,19.5,75,6,15
+chn_adyar,Chennai,Tamil Nadu,Adyar,35.73,16,759,15.2,High,9,1073,37.2,180,1.37,40,Three-Wheeler (E),41,19.4,60,3,4
+chn_anna_nagar,Chennai,Tamil Nadu,Anna Nagar,18.68,10,449,28.4,Moderate,8,1384,88.5,533,1.79,17,Mini Van,26,20.1,177,9,24
+chn_velachery,Chennai,Tamil Nadu,Velachery,43.73,7,588,12.6,Severe,1,189,62.9,277,2.83,54,Two-Wheeler,14,17.8,92,4,10
+chn_mylapore,Chennai,Tamil Nadu,Mylapore,14.61,19,708,14.3,Severe,5,879,43.3,100,2.69,58,Light Truck,45,18.6,33,10,21
+chn_nungambakkam,Chennai,Tamil Nadu,Nungambakkam,36.53,11,463,31.4,Low,9,1140,25.3,206,1.91,59,Two-Wheeler,49,13.2,68,3,4
+chn_tambaram,Chennai,Tamil Nadu,Tambaram,23.69,17,1598,19.6,High,4,380,35,475,3.14,60,Two-Wheeler,20,19,158,6,18
+chn_porur,Chennai,Tamil Nadu,Porur,50.6,6,718,13.9,Severe,12,1694,29.8,541,2.17,21,E-Cargo Bike,10,9.2,180,6,13
+chn_guindy,Chennai,Tamil Nadu,Guindy,54.3,12,1015,28.5,Moderate,11,1511,70.6,494,1.96,52,Two-Wheeler,18,14.2,164,3,5
+chn_perambur,Chennai,Tamil Nadu,Perambur,46.06,14,1938,29.7,Moderate,6,684,59.7,527,3.12,85,Two-Wheeler,28,16,175,1,2
+chn_kodambakkam,Chennai,Tamil Nadu,Kodambakkam,20.85,5,972,16.1,High,3,272,48.9,154,3.04,9,Two-Wheeler,8,11.6,51,9,28
+chn_chromepet,Chennai,Tamil Nadu,Chromepet,14.79,16,850,32,Low,6,824,33.7,492,3.03,74,Two-Wheeler,47,13.5,164,0,0
+chn_ambattur,Chennai,Tamil Nadu,Ambattur,55.66,5,1061,21.4,High,9,799,23.9,164,2.28,42,Mini Van,57,15.3,54,9,16
+chn_besant_nagar,Chennai,Tamil Nadu,Besant Nagar,58.29,11,564,24.6,Moderate,8,898,86.3,502,2.11,26,Two-Wheeler,22,20.6,167,4,10
+chn_nanganallur,Chennai,Tamil Nadu,Nanganallur,44.41,20,1932,20.7,High,4,597,62.2,467,1.36,65,Mini Van,58,10.4,155,4,9
+chn_royapettah,Chennai,Tamil Nadu,Royapettah,19.53,3,966,31.2,Low,4,398,73.7,92,2.59,45,Two-Wheeler,30,19.4,30,4,9
+chn_vadapalani,Chennai,Tamil Nadu,Vadapalani,56.85,17,1696,13.1,Severe,6,837,58.6,576,1.53,58,Two-Wheeler,46,13.5,192,2,3
+kol_salt_lake,Kolkata,West Bengal,Salt Lake,32.67,11,979,18.4,High,14,2233,85.9,328,2.79,84,Light Truck,17,21.4,109,1,2
+kol_park_street,Kolkata,West Bengal,Park Street,55.98,9,1594,25.8,Moderate,2,303,59.9,288,1.5,18,Two-Wheeler,49,14.5,96,10,20
+kol_ballygunge,Kolkata,West Bengal,Ballygunge,22.68,8,568,28.7,Moderate,13,1724,45.7,551,2.1,23,Mini Van,39,15.7,183,9,26
+kol_howrah,Kolkata,West Bengal,Howrah,26.57,21,989,26.3,Moderate,8,1096,23.2,244,2.36,20,Three-Wheeler (E),30,12.4,81,6,11
+kol_behala,Kolkata,West Bengal,Behala,34.4,4,2213,27.2,Moderate,11,1981,31,161,1.29,30,Two-Wheeler,50,10,53,11,26
+kol_garia,Kolkata,West Bengal,Garia,47.72,13,1135,25.1,Moderate,7,1250,40.2,132,2.33,22,Two-Wheeler,18,22,44,9,19
+kol_dum_dum,Kolkata,West Bengal,Dum Dum,43.57,8,963,16.2,High,4,402,85,512,3.17,63,Three-Wheeler (E),17,15,170,11,29
+kol_jadavpur,Kolkata,West Bengal,Jadavpur,27.61,5,2200,21.6,High,13,1919,43.8,480,2.13,21,E-Cargo Bike,52,21.9,160,10,28
+kol_new_town,Kolkata,West Bengal,New Town,60.77,3,2093,12.1,Severe,2,313,30.5,511,3.17,72,Two-Wheeler,15,11.9,170,9,24
+kol_tollygunge,Kolkata,West Bengal,Tollygunge,29.47,6,1028,19.1,High,5,870,34.9,231,2.23,47,Two-Wheeler,33,8.6,77,5,15
+kol_alipore,Kolkata,West Bengal,Alipore,60.08,9,1602,19,High,7,1359,58.4,460,2.13,64,E-Cargo Bike,40,8.4,153,2,5
+kol_lake_town,Kolkata,West Bengal,Lake Town,60.57,6,522,25.2,Moderate,9,1387,79.6,218,3.07,87,Three-Wheeler (E),59,18.9,72,3,9
+kol_rajarhat,Kolkata,West Bengal,Rajarhat,70.3,20,1841,16,High,3,435,87.3,376,2.25,71,Two-Wheeler,15,14.3,125,4,8
+kol_shyambazar,Kolkata,West Bengal,Shyambazar,61.66,22,1823,31.1,Low,8,973,91.6,236,1.37,59,Light Truck,59,14.5,78,4,11
+kol_kasba,Kolkata,West Bengal,Kasba,47.97,9,675,23.6,Moderate,11,1846,64,125,2.61,29,Three-Wheeler (E),10,14.4,41,9,20
+kol_baguiati,Kolkata,West Bengal,Baguiati,55.2,13,1389,30.7,Low,6,927,31.4,519,1.93,72,Mini Van,42,20.7,173,1,1
+kol_barasat,Kolkata,West Bengal,Barasat,43.41,18,1292,12.5,Severe,11,1346,56.4,436,2.48,76,Two-Wheeler,42,11,145,8,13
+pun_koregaon_park,Pune,Maharashtra,Koregaon Park,57.9,15,1053,22,Moderate,11,907,87.4,191,1.94,27,Two-Wheeler,24,18.1,63,10,23
+pun_baner,Pune,Maharashtra,Baner,24.5,12,1455,28.9,Moderate,8,1316,68.5,463,2.51,77,Two-Wheeler,36,18.6,154,0,0
+pun_kothrud,Pune,Maharashtra,Kothrud,31.54,5,555,19.7,High,9,1253,60.2,476,2.78,47,Light Truck,7,8.9,158,5,9
+pun_hinjewadi,Pune,Maharashtra,Hinjewadi,38.35,13,1655,23.1,Moderate,4,788,51.4,238,2.24,56,Two-Wheeler,10,13.2,79,0,0
+pun_viman_nagar,Pune,Maharashtra,Viman Nagar,55.4,12,990,32.8,Low,4,429,36.4,96,1.48,70,E-Cargo Bike,26,8.5,32,3,6
+pun_aundh,Pune,Maharashtra,Aundh,14.76,15,1046,33.9,Low,2,244,90.6,329,3.01,68,Two-Wheeler,32,17.7,109,9,17
+pun_wakad,Pune,Maharashtra,Wakad,52.39,3,889,24.8,Moderate,9,1183,56.8,73,1.53,32,E-Cargo Bike,28,21.6,24,3,8
+pun_hadapsar,Pune,Maharashtra,Hadapsar,37.09,15,888,18.4,High,3,418,65,490,1.82,51,Mini Van,13,13.3,163,1,3
+pun_camp,Pune,Maharashtra,Camp,43.45,11,1015,29.5,Moderate,3,544,78.5,227,2.25,63,Two-Wheeler,43,20,75,8,25
+pun_kharadi,Pune,Maharashtra,Kharadi,20.14,18,528,18.3,High,5,404,39.7,494,1.77,54,Two-Wheeler,46,9.4,164,6,17
+pun_shivaji_nagar,Pune,Maharashtra,Shivaji Nagar,15.49,13,1278,29.2,Moderate,7,1349,85.8,241,2,21,E-Cargo Bike,47,12.1,80,9,13
+pun_katraj,Pune,Maharashtra,Katraj,25,6,463,31.4,Low,6,899,50.5,464,2.45,65,Two-Wheeler,22,19,154,1,3
+pun_pimpri,Pune,Maharashtra,Pimpri,39.05,6,828,25,Moderate,1,121,39.3,426,2.85,45,Two-Wheeler,36,14,142,1,3
+pun_chinchwad,Pune,Maharashtra,Chinchwad,30.56,18,1903,20.7,High,10,1751,44.3,328,3.08,36,Mini Van,26,14.7,109,9,15
+pun_magarpatta,Pune,Maharashtra,Magarpatta,38.78,18,1450,24,Moderate,10,971,60.4,357,1.55,27,Three-Wheeler (E),21,17.3,119,9,13
+pun_warje,Pune,Maharashtra,Warje,39.47,17,1070,31.7,Low,7,642,69.8,380,3.08,19,Mini Van,10,21.5,126,2,4
+pun_deccan,Pune,Maharashtra,Deccan,26.59,6,862,26.2,Moderate,2,189,60.3,517,2.71,34,Two-Wheeler,17,19.4,172,8,21
+jai_c_scheme,Jaipur,Rajasthan,C Scheme,19.54,15,709,25.3,Moderate,7,1332,35.8,423,2.82,16,Three-Wheeler (E),22,20.9,141,5,10
+jai_malviya_nagar,Jaipur,Rajasthan,Malviya Nagar,32.32,8,451,17,High,5,713,82.3,93,2.36,21,Two-Wheeler,40,15.4,31,7,16
+jai_vaishali_nagar,Jaipur,Rajasthan,Vaishali Nagar,18.54,4,609,25.1,Moderate,4,506,76.4,66,3.17,67,Two-Wheeler,16,19.4,22,1,2
+jai_mansarovar,Jaipur,Rajasthan,Mansarovar,24.71,16,1165,24.1,Moderate,2,204,85,86,2.43,69,Two-Wheeler,8,13.1,28,4,7
+jai_raja_park,Jaipur,Rajasthan,Raja Park,50.74,16,649,35.6,Low,6,781,72.6,270,2.7,7,Two-Wheeler,36,10.8,90,6,18
+jai_jagatpura,Jaipur,Rajasthan,Jagatpura,15.4,12,679,30.2,Low,1,153,78.6,415,1.45,10,Two-Wheeler,8,17.8,138,6,18
+jai_tonk_road,Jaipur,Rajasthan,Tonk Road,20.25,11,417,18.3,High,2,381,20.1,191,2.37,30,Two-Wheeler,30,16.8,63,6,16
+jai_bani_park,Jaipur,Rajasthan,Bani Park,15.52,8,1276,30.4,Low,8,1172,37.2,428,1.98,53,Two-Wheeler,35,17.3,142,6,19
+jai_sanganer,Jaipur,Rajasthan,Sanganer,50.02,13,1598,38.3,Low,4,549,57.2,143,2.03,31,Mini Van,40,20.1,47,5,10
+jai_jhotwara,Jaipur,Rajasthan,Jhotwara,32.69,11,678,32.7,Low,6,928,54.2,397,2.31,42,Two-Wheeler,32,15,132,6,12
+jai_vidhyadhar_nagar,Jaipur,Rajasthan,Vidhyadhar Nagar,41.69,7,457,31.2,Low,8,656,66.2,373,2.03,8,Two-Wheeler,23,14.1,124,3,6
+jai_civil_lines,Jaipur,Rajasthan,Civil Lines,18.79,4,1647,16.4,High,4,394,40.6,258,2.08,38,Three-Wheeler (E),23,16.2,86,0,0
+jai_ajmer_road,Jaipur,Rajasthan,Ajmer Road,38.86,3,515,20.5,High,7,853,87.1,404,2.45,66,Light Truck,12,13,134,1,3
+jai_sodala,Jaipur,Rajasthan,Sodala,28.39,3,1669,28.7,Moderate,3,559,81,329,2.43,41,Mini Van,32,9.1,109,3,6
+jai_amer_road,Jaipur,Rajasthan,Amer Road,36.68,14,589,37.8,Low,7,625,72.3,244,2.07,31,Mini Van,45,15.1,81,6,20
+jai_durgapura,Jaipur,Rajasthan,Durgapura,21.28,12,1118,18.9,High,9,1733,61.7,355,2.94,19,Mini Van,8,11.7,118,6,19
+jai_shastri_nagar,Jaipur,Rajasthan,Shastri Nagar,31.34,7,611,18.3,High,5,750,74.2,397,1.75,38,Two-Wheeler,30,21,132,7,22
+vskp_mvp_colony,Visakhapatnam,Andhra Pradesh,MVP Colony,24.62,5,907,40,Low,8,870,60.9,157,1.73,11,Two-Wheeler,34,13.7,52,2,4
+vskp_dwaraka_nagar,Visakhapatnam,Andhra Pradesh,Dwaraka Nagar,37.92,8,1657,37.7,Low,8,1056,53.3,423,1.58,54,Two-Wheeler,40,14.1,141,5,9
+vskp_seethammadhara,Visakhapatnam,Andhra Pradesh,Seethammadhara,14.13,14,370,23.1,Moderate,5,873,49.1,200,2.97,43,Three-Wheeler (E),26,15.6,66,4,7
+vskp_gajuwaka,Visakhapatnam,Andhra Pradesh,Gajuwaka,15.8,6,1114,33.2,Low,8,723,44.3,238,2.7,64,E-Cargo Bike,16,21.8,79,5,12
+vskp_old_gajuwaka,Visakhapatnam,Andhra Pradesh,Old Gajuwaka,9.95,12,1273,34.4,Low,5,641,69.2,74,1.54,38,Light Truck,31,19.8,24,3,6
+vskp_madhurawada,Visakhapatnam,Andhra Pradesh,Madhurawada,28.28,16,1108,36.1,Low,3,395,71.4,128,2.85,42,Two-Wheeler,30,9.9,42,8,12
+vskp_rushikonda,Visakhapatnam,Andhra Pradesh,Rushikonda,10.65,9,966,38.1,Low,4,461,68.8,243,2.56,44,Mini Van,32,16.9,81,0,0
+vskp_yendada,Visakhapatnam,Andhra Pradesh,Yendada,35.97,13,1410,34.6,Low,9,1107,94.6,71,2.74,36,Two-Wheeler,20,17,23,2,6
+vskp_pendurthi,Visakhapatnam,Andhra Pradesh,Pendurthi,20.39,3,771,27,Moderate,2,269,43.9,371,2.56,25,E-Cargo Bike,10,13.4,123,8,12
+vskp_simhachalam,Visakhapatnam,Andhra Pradesh,Simhachalam,19.48,3,1130,29.8,Moderate,9,814,82,277,2.65,48,Two-Wheeler,16,17.5,92,0,0
+vskp_marripalem,Visakhapatnam,Andhra Pradesh,Marripalem,35.01,11,1071,21.5,High,2,388,81.2,281,1.9,30,Light Truck,9,17.6,93,1,2
+vskp_arilova,Visakhapatnam,Andhra Pradesh,Arilova,38.6,5,1655,32.1,Low,8,1403,43,281,2.81,60,Two-Wheeler,20,18.3,93,1,2
+vskp_nad_junction,Visakhapatnam,Andhra Pradesh,NAD Junction,32.2,6,765,18.1,High,1,154,28.3,268,2.94,59,Mini Van,22,8.5,89,2,6
+vskp_kancharapalem,Visakhapatnam,Andhra Pradesh,Kancharapalem,38.03,7,1648,15.9,High,8,986,75.7,324,2.62,24,E-Cargo Bike,37,17.3,108,7,16
+vskp_malkapuram,Visakhapatnam,Andhra Pradesh,Malkapuram,32.96,4,1199,32.3,Low,3,341,34.9,96,1.9,59,Three-Wheeler (E),42,18.5,32,3,9
+vskp_akkayyapalem,Visakhapatnam,Andhra Pradesh,Akkayyapalem,34.7,10,372,32.5,Low,9,844,85.4,156,1.89,7,E-Cargo Bike,9,8.1,52,5,12
+vskp_vepagunta,Visakhapatnam,Andhra Pradesh,Vepagunta,33.98,5,729,33.5,Low,8,971,44,348,1.51,64,E-Cargo Bike,16,13.9,116,5,16

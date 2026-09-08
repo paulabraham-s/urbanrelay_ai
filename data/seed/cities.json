@@ -1,0 +1,101 @@
+{
+  "cities": [
+    {
+      "name": "Hyderabad / Secunderabad",
+      "code": "hyderabad",
+      "center_lat": 17.45,
+      "center_lng": 78.4,
+      "geojson": "hyderabad_roads.geojson",
+      "calibration_city": "Hyderabad",
+      "zones": [
+        {
+          "name": "Secunderabad",
+          "code": "SECUNDERABAD",
+          "center_lat": 17.4399,
+          "center_lng": 78.4983,
+          "radius_km": 2.2,
+          "base_demand_rate": 55.0,
+          "road_capacity": 80,
+          "color": "#38bdf8",
+          "calibration_area": "Secunderabad"
+        },
+        {
+          "name": "Kukatpally",
+          "code": "KUKATPALLY",
+          "center_lat": 17.4849,
+          "center_lng": 78.4087,
+          "radius_km": 2.2,
+          "base_demand_rate": 72.0,
+          "road_capacity": 90,
+          "color": "#f59e0b",
+          "calibration_area": "Kukatpally"
+        },
+        {
+          "name": "Miyapur",
+          "code": "MIYAPUR",
+          "center_lat": 17.4993,
+          "center_lng": 78.355,
+          "radius_km": 2.2,
+          "base_demand_rate": 46.0,
+          "road_capacity": 70,
+          "color": "#34d399",
+          "calibration_area": "Miyapur"
+        }
+      ]
+    },
+    {
+      "name": "Visakhapatnam",
+      "code": "vizag",
+      "center_lat": 17.72,
+      "center_lng": 83.3,
+      "geojson": "vizag_roads.geojson",
+      "calibration_city": "Visakhapatnam",
+      "zones": [
+        {
+          "name": "Dwaraka Nagar",
+          "code": "DWARAKA_NAGAR",
+          "center_lat": 17.723,
+          "center_lng": 83.301,
+          "radius_km": 2.2,
+          "base_demand_rate": 60.0,
+          "road_capacity": 66,
+          "color": "#38bdf8",
+          "calibration_area": "Dwaraka Nagar"
+        },
+        {
+          "name": "Kancharapalem",
+          "code": "KANCHARAPALEM",
+          "center_lat": 17.716,
+          "center_lng": 83.283,
+          "radius_km": 2.2,
+          "base_demand_rate": 46.0,
+          "road_capacity": 66,
+          "color": "#f59e0b",
+          "calibration_area": "Kancharapalem"
+        },
+        {
+          "name": "Gajuwaka",
+          "code": "GAJUWAKA",
+          "center_lat": 17.63,
+          "center_lng": 83.201,
+          "radius_km": 2.2,
+          "base_demand_rate": 34.0,
+          "road_capacity": 44,
+          "color": "#34d399",
+          "calibration_area": "Gajuwaka"
+        },
+        {
+          "name": "MVP Colony",
+          "code": "MVP_COLONY",
+          "center_lat": 17.735,
+          "center_lng": 83.335,
+          "radius_km": 2.2,
+          "base_demand_rate": 22.0,
+          "road_capacity": 36,
+          "color": "#a78bfa",
+          "calibration_area": "MVP Colony"
+        }
+      ]
+    }
+  ]
+}

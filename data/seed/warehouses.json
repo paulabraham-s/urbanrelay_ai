@@ -1,0 +1,9 @@
+[
+  { "id": "wh-secunderabad", "name": "Secunderabad Fulfillment Center", "city": "hyderabad", "lat": 17.4399, "lng": 78.4983 },
+  { "id": "wh-kukatpally", "name": "Kukatpally Fulfillment Center", "city": "hyderabad", "lat": 17.4849, "lng": 78.4087 },
+  { "id": "wh-miyapur", "name": "Miyapur Fulfillment Center", "city": "hyderabad", "lat": 17.4993, "lng": 78.355 },
+  { "id": "wh-dwaraka", "name": "Dwaraka Nagar Fulfillment Center", "city": "vizag", "lat": 17.723, "lng": 83.301 },
+  { "id": "wh-kancharapalem", "name": "Kancharapalem Port-Side Depot", "city": "vizag", "lat": 17.716, "lng": 83.283 },
+  { "id": "wh-gajuwaka", "name": "Gajuwaka Industrial Fulfillment Center", "city": "vizag", "lat": 17.63, "lng": 83.201 },
+  { "id": "wh-mvp", "name": "MVP Colony Fulfillment Center", "city": "vizag", "lat": 17.735, "lng": 83.335 }
+]
