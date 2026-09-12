@@ -34,11 +34,7 @@ def _parse_cors() -> list[str]:
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(
-        env_file=BACKEND_DIR / ".env",
-        extra="ignore",
-        env_ignore={"CORS_ORIGINS"},
-    )
+    model_config = SettingsConfigDict(env_file=BACKEND_DIR / ".env", extra="ignore")
 
     app_name: str = "UrbanRelay AI"
     debug: bool = False
@@ -49,13 +45,6 @@ class Settings(BaseSettings):
 
     # Database
     database_url: str = f"sqlite:///{BACKEND_DIR / 'urbanrelay.db'}"
-
-    # CORS — read from env in get_settings(), not via pydantic-settings
-    cors_origins: list[str] = [
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "chrome-extension://*",
-    ]
 
     # Data locations
     geojson_dir: str = str(REPO_ROOT / "data" / "geojson")
@@ -71,9 +60,11 @@ class Settings(BaseSettings):
     sim_seed: int = 42
     sim_reopt_interval: float = 150.0
 
+    def model_post_init(self, __context):
+        """Set cors_origins AFTER pydantic init to avoid env var parse crash."""
+        object.__setattr__(self, "cors_origins", _parse_cors())
+
 
 @lru_cache
 def get_settings() -> Settings:
-    s = Settings()
-    s.cors_origins = _parse_cors()
-    return s
+    return Settings()
