@@ -41,9 +41,12 @@ class Settings(BaseSettings):
     @classmethod
     def _parse_cors(cls, v):
         if isinstance(v, str):
+            v = v.strip()
+            if not v:
+                return ["*"]
             try:
                 return json.loads(v)
-            except json.JSONDecodeError:
+            except (json.JSONDecodeError, ValueError):
                 return [o.strip() for o in v.split(",") if o.strip()]
         return v
 
