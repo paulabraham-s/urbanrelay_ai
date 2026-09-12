@@ -4,9 +4,12 @@ All values can be overridden through environment variables or a .env file
 placed in the backend/ directory (see .env.example at the repo root).
 """
 
+import json
+import os
 from functools import lru_cache
 from pathlib import Path
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = Path(__file__).resolve().parents[2]
@@ -25,20 +28,32 @@ class Settings(BaseSettings):
 
     # Database. Default is zero-setup SQLite stored next to the backend; switch
     # to PostgreSQL by setting DATABASE_URL and using docker-compose for PostGIS.
-    # Absolute path so the default works regardless of the working directory.
     database_url: str = f"sqlite:///{BACKEND_DIR / 'urbanrelay.db'}"
 
-    # CORS
+    # CORS — accepts a JSON list or comma-separated string via env var
     cors_origins: list[str] = [
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "chrome-extension://*",
     ]
 
-    # Data locations
+    @field_validator("cors_origins", mode="before")
+    @classmethod
+    def _parse_cors(cls, v):
+        if isinstance(v, str):
+            try:
+                return json.loads(v)
+            except json.JSONDecodeError:
+                return [o.strip() for o in v.split(",") if o.strip()]
+        return v
+
+    # Data locations — resolved relative to this file so they work in any CWD
     geojson_dir: str = str(REPO_ROOT / "data" / "geojson")
     geojson_path: str = str(REPO_ROOT / "data" / "geojson" / "hyderabad_roads.geojson")
     seed_dir: str = str(REPO_ROOT / "data" / "seed")
+
+    # Frontend dist — for serving static files in production
+    frontend_dist: str = str(REPO_ROOT / "frontend" / "dist")
 
     # Simulation defaults
     sim_tick_seconds: float = 1.0       # wall-clock seconds per sim tick at 1x

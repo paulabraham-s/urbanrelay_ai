@@ -2,9 +2,12 @@
 
 import logging
 from contextlib import asynccontextmanager
+from pathlib import Path
 
-from fastapi import Depends, FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import Depends, FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from app.api import (
     agents,
@@ -99,13 +102,10 @@ async def ws_sim(ws: WebSocket):
     await manager.connect(ws)
     sim = get_sim_service()
     try:
-        # send an initial full snapshot so the client can bootstrap the map
         import json
-
         await ws.send_text(json.dumps({"type": "snapshot", **sim.snapshot()}, default=str))
         while True:
             message = await ws.receive_text()
-            # keepalive ping
             if message == "ping":
                 await ws.send_text(json.dumps({"type": "pong"}))
     except WebSocketDisconnect:
@@ -114,12 +114,27 @@ async def ws_sim(ws: WebSocket):
         await manager.disconnect(ws)
 
 
-@app.get("/")
-def root() -> dict:
-    return {
-        "name": settings.app_name,
-        "docs": "/docs",
-        "health": "/health",
-        "ready": "/ready",
-        "ws": "/ws/sim",
-    }
+# ── Serve frontend static files in production ──────────────────────────
+_frontend_dist = Path(settings.frontend_dist)
+if _frontend_dist.is_dir():
+    # Serve real static assets (JS, CSS, images, GeoJSON data)
+    _assets_dir = _frontend_dist / "assets"
+    if _assets_dir.is_dir():
+        app.mount("/assets", StaticFiles(directory=str(_assets_dir)), name="static-assets")
+    _data_dir = _frontend_dist / "data"
+    if _data_dir.is_dir():
+        app.mount("/data", StaticFiles(directory=str(_data_dir)), name="static-data")
+
+    # SPA fallback: serve index.html for any 404 that isn't an API route
+    _index_html = _frontend_dist / "index.html"
+    _api_prefixes = ("/api/", "/health", "/ready", "/docs", "/ws/", "/openapi.json")
+
+    @app.exception_handler(404)
+    async def spa_fallback(request: Request, exc):
+        path = request.url.path
+        # Let API / docs / WebSocket 404s return normally
+        if path.startswith(_api_prefixes):
+            from fastapi.responses import JSONResponse
+            return JSONResponse(status_code=404, content={"detail": "Not found"})
+        # For everything else, serve index.html (React Router handles client routing)
+        return FileResponse(str(_index_html))

@@ -50,8 +50,9 @@ dist/
 *.sqlite
 *.sqlite3
 
-# Frontend public data is a build-time copy — source of truth is data/geojson
-frontend/public/data/
+# Frontend public data — tracked for non-Docker builds (Render, Railway, etc.)
+# Source of truth is data/geojson/; these copies are needed at build time
+# frontend/public/data/
 
 # Jupyter
 .ipynb_checkpoints/
